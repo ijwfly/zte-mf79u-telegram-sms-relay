@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  sms-relay-bot:
+    build: .
+    container_name: zte-sms-relay-bot
+    restart: unless-stopped
+    environment:
+      TELEGRAM_BOT_TOKEN: "YOUR_TOKEN"  # Get from @BotFather
+      TARGET_USER_ID: "YOUR_TELEGRAM_ID"    # Your Telegram user ID
+#      MODEM_IP: "192.168.0.1"
+#      MODEM_PORT: "80"
+#      MODEM_PASSWORD: "admin"
